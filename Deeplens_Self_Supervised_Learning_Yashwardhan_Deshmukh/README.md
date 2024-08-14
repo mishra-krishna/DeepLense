@@ -17,7 +17,7 @@ Contrastive learning is a type of self-supervised learning method, that tries to
 
 ## Bootstrap Your Own Latent (BYOL) Learning
 
-BYOL trains two networks, the target network and the online network, both in parallel. There are no positive or negative pairs here like there are in contrastive learning. Two different augmented views of the ‘same’ image are brought, and representations are learned using the online network, while the target network is a moving average of the online network, giving it a slower parameter update.
+BYOL trains two networks simultaneously: the online network, which learns the representations, and the target network, which is a slowly updated moving average of the online network. There are no positive or negative pairs here like there are in contrastive learning. Two different augmented views of the ‘same’ image are brought, and representations are learned using the online network, while the target network is a moving average of the online network, giving it a slower parameter update.
 
 <img src="byol.png">
 
